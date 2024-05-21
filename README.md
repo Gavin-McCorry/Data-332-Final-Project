@@ -8,7 +8,7 @@ This project explores the relationship between Olympic medals won by countries a
 
 ## Data Collection
 - **Olympic Medals Data:** Obtained from Kaggle(A Data Science platform containing published data sets). [Source](https://www.kaggle.com/datasets/ramontanoeiro/summer-olympic-medals-1986-2020?resource=download)
-- **GDP Data:**  Obtained from Kaggle(A Data Science platform containing published data sets)
+- **GDP Data:**  Obtained from Kaggle(A Data Science platform containing published data sets). [Source](https://www.kaggle.com/datasets/yapwh1208/countries-gdp-2012-to-2021?resource=download)
 - **Immigration Data:** Gathered from th United Nations website under Data, International Migrant Stock. [Source](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fwww.un.org%2Fdevelopment%2Fdesa%2Fpd%2Fsites%2Fwww.un.org.development.desa.pd%2Ffiles%2Fundesa_pd_2020_ims_stock_by_sex_and_destination.xlsx&wdOrigin=BROWSELINK)
 
   
@@ -23,11 +23,15 @@ df_medals$Country_Name <- sub("Great Britain", "United Kingdom", df_medals$Count
 ```
 
 ### GDP Data:
-1. 
+1. This data set was organized poorly. It had all the countries as rows and then each year as a different column, resulting in a lot of null values. In order to fix this we decided to change all the year columns into 1 single year column that displays the year
+```
+gdp <- melt(gdp, id.vars = c("Country Name", "Country Code"), variable.name = "Year", value.name = "GDP")
+```
+2. We also had to filter the Year => 1990, since the data started at 1960 but the first year we had olympic data was 1990
 
 ### Immigration Data
 1. This was by far the hardest data set to clean. To start the exel file that contained the data had 5 different sheets with different measurements of immigration for each. We elected to use the sheet containing "International migrant stock as a percentage of the total population". We decided that this would best show correlation between imigration and Olympic medals won since it shows th percentage of a country that are immigrants in a given year. As for the other sheets we deleted them.
-2. The Data was given in an untidy way were each yar was a column containing an immigration rat for a corrrespoding country
+2. The Data was given in an untidy way were each year was a column containing an immigration rat for a corrrespoding country
 
 ## Shiny App
 - The project includes a Shiny web application for interactive data visualization and exploration.
