@@ -1,0 +1,13 @@
+name: Olympic-Medals-App
+title: Olympic-Medals-App
+username: gavin-mccorry
+account: gavin-mccorry
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 12053618
+bundleId: 8649201
+url: https://gavin-mccorry.shinyapps.io/Olympic-Medals-App/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: Cleaning Immigration Rates Data.R|Cleaning Olympic Medals Count Data.R|Combining Data sets and Final Cleaning.R|Data/Country_Immigration_perc_by_year|Data/GDP|Data/Olympic Medals Count Data|Data/Summer_olympic_Medals.csv|Data/undesa_pd_2020_ims_stock_by_sex_and_destination.xlsx|Making graphs.R|README.md
