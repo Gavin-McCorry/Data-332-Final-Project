@@ -4,7 +4,11 @@
 This project explores the relationship between Olympic medals won by countries and their GDP (Gross Domestic Product) and immigration rates. By analyzing this relationship, we aim to understand how economic factors and immigration patterns might influence a country's performance in the Olympics.
 
 ## Data Dictionary
-
+- **Country:** The name of the country
+- **Year:** The year all the data was recorded from
+- **Total Medals:** The total amount of medals one by a country at a single Olymipcs
+- **GDP:** The Gross Domestic Product of the country
+- **Immigration_Perc_of_total_Pop:** The immigration percentage of the country's population
 
 ## Data Collection
 - **Olympic Medals Data:** Obtained from Kaggle(A Data Science platform containing published data sets). [Source](https://www.kaggle.com/datasets/ramontanoeiro/summer-olympic-medals-1986-2020?resource=download)
@@ -16,7 +20,7 @@ This project explores the relationship between Olympic medals won by countries a
 To be able to use all of this data, we first had to clean each data set speratley before being able to combine the data in one data frame. 
 
 ### Olympic Medals Data:
-1. This data set was overall relativley clean. We started by adding a total medal column, done by dding up the medal counts of Gold, Silver, and Bronze for each country for each Olympic Games.
+1. This data set was overall relativley clean. We started by adding a total medal column, done by adding up the medal counts of Gold, Silver, and Bronze for each country for each Olympic Games.
 2. Next, to match the naming convention used in the other data sets a few country names were changed. EX:
 ```{r}
 df_medals$Country_Name <- sub("Great Britain", "United Kingdom", df_medals$Country_Name)
